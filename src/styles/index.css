@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@import "../assets/styles/fonts.css";
+@import "../assets/styles/animations.css";
+@import "./variables.css";
+@import "./themes.css";
+@import "./global.css";
+@import "./responsive.css";

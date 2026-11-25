@@ -1,0 +1,16 @@
+/* Hide scrollbars on horizontal category strips */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Mobile bottom bar safe spacing */
+@media (max-width: 767px) {
+  .mobile-nav-spacer {
+    padding-bottom: 4.5rem;
+  }
+}
