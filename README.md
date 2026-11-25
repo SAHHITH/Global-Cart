@@ -1,170 +1,330 @@
-```markdown
-# Global Cart — Smart Marketplace
+# 🛒 Global Cart – E-Commerce Website
 
-A modern, responsive, 100% frontend e-commerce marketplace built with **React 19**, **Vite**, **Tailwind CSS**, and **Zustand** (`localStorage` persistence). **Global Cart** features a startup authentication flow, dual-tier marketplace navigation, Indian Rupee (`₹`) pricing across 10 departments, a 3-step checkout experience, live warehouse-to-customer order tracking, and an interactive merchant analytics console.
+A modern, responsive e-commerce frontend built with React and Vite, inspired by the shopping experiences of Amazon and Flipkart.
 
-![React](https://img.shields.io/badge/React-19-171717?style=for-the-badge&logo=react&logoColor=A31C1B)
-![Vite](https://img.shields.io/badge/Vite-6-06110C?style=for-the-badge&logo=vite&logoColor=white)
-![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-171717?style=for-the-badge&logo=tailwindcss&logoColor=A31C1B)
-![Zustand](https://img.shields.io/badge/State-Zustand_Persist-A31C1B?style=for-the-badge)
+Global Cart provides a seamless online shopping interface with product discovery, category browsing, shopping cart management, wishlist functionality, theme switching, and a simulated checkout experience.
+
+The project focuses on delivering a premium UI/UX design using modern frontend technologies and multiple UI component libraries.
 
 ---
 
-## Key Features
+## 🌟 Features
 
-- **Startup Authentication Gate (`/login`):** Launches with a dedicated Sign In / Create Account experience persisted via `localStorage`, complete with one-click **Shopper** and **Admin** demo login options.
-- **Dual-Tier Navigation Architecture:**
-  - **Main Header:** Brand logo, category-scoped live search bar, **Light / Dark / System** theme switcher, direct **About** and **Contact** links, live **Orders**, **Wishlist**, and **Cart** counters, plus an **Account** dropdown menu containing the **Admin Dashboard** and **Sign Out** actions.
-  - **Secondary Category Strip:** Quick-access department links alongside **Home**, **All Products**, **Categories**, and **Today’s Offers (`HOT`)**.
-- **Multi-Category Catalog & INR (`₹`) Pricing:**
-  - **48+ curated products** across **10 departments** (*Electronics, Fashion, Home & Kitchen, Beauty, Sports, Accessories, Books & Stationery, Toys & Gaming, Groceries & Gourmet, Automotive & Tools*) and **25+ brands**.
-  - Full `en-IN` Rupee (`₹`) formatting, brand & category badges, star ratings, Quick View modal, and detailed product specification tabs.
-- **Real-Time Filtering, Cart & Promo Engine:**
-  - Filter by department, brand, minimum customer rating, stock availability, and an interactive `₹0 – ₹2,00,000` price range slider.
-  - Persistent Shopping Cart and Wishlist with automatic free delivery on orders **₹999+** (`₹79` delivery fee below `₹999`) and live promo code validation (`WELCOME15`, `GLOBAL10`, `SAVE500`).
-- **3-Step Checkout & Warehouse-to-Customer Tracking (`/orders`):**
-  - Material UI `Stepper` checkout covering **Shipping Address**, **Simulated Payment Method** (*Card*, *Global Pay Wallet*, *Pay on Delivery*), and **Order Review**.
-  - Dedicated **Ordered Details** page displaying itemized `₹` payment receipts and a 5-stage **Warehouse-to-Customer** shipment tracker (*Order Confirmed → Packed at Warehouse → Dispatched from Warehouse → Out for Delivery → Delivered to Customer*) with an interactive **"Simulate Next Transit Step"** control.
-- **Merchant & Analytics Console (`/admin`):**
-  - Real-time KPI cards, **Recharts** 6-month revenue area chart and category valuation bar chart, plus an **Ant Design** inventory table to add or remove live catalog SKUs.
+### 🏠 Homepage
+- Modern promotional hero section
+- Featured and trending products
+- Product category showcase
+- Deal of the day section
+- Promotional banners
+- Brand showcase
+
+### 🛍️ Product Management
+- Product listing and product details pages
+- Product image gallery
+- Product search functionality
+- Category-based filtering
+- Price range filtering
+- Brand filtering
+- Rating-based filtering
+- Product sorting
+- Discount and bestseller badges
+
+### 🛒 Shopping Cart
+- Add products to cart
+- Remove products from cart
+- Increase and decrease product quantity
+- Automatic subtotal calculation
+- Cart drawer and cart page
+- Coupon code interface
+- Cart data persistence using LocalStorage
+
+### ❤️ Wishlist
+- Add products to wishlist
+- Remove products from wishlist
+- View saved products
+- Wishlist persistence using LocalStorage
+
+### 🎨 Theme Management
+- Light theme
+- Dark theme
+- System theme
+- Persistent theme preferences
+- Smooth theme transitions
+
+### 📦 Checkout
+- Frontend checkout form
+- Customer and delivery information
+- Order summary
+- Form validation
+- Simulated order confirmation
+
+### 📊 Admin Dashboard
+- Mock sales analytics
+- Product statistics
+- Revenue overview
+- Sales charts
+- Product management interface
+
+### 📱 Responsive Design
+- Desktop, tablet, and mobile support
+- Responsive product grid
+- Mobile navigation
+- Sticky header
+- Smooth animations
+- Accessible UI elements
 
 ---
 
-## Color System & Theme Modes
+## 🎨 Design System
 
-Global Cart supports **Light**, **Dark**, and **System** themes powered by CSS custom properties and a 3-color brand palette:
+Global Cart uses a premium marketplace-inspired design system.
 
-| Token | Color Name | Hex Code | Usage |
-| :--- | :--- | :--- | :--- |
-| `--brand-charcoal` | **Charcoal Black** | `#171717` | Main top header, footer surface, light-mode primary text, dark-mode cards & modals |
-| `--brand-forest` | **Forest Green** | `#06110C` | Secondary category navbar, announcement strip, hero gradients, dark-mode canvas |
-| `--brand-crimson` | **Crimson Red** | `#A31C1B` | Primary CTAs (*Add to Cart*, *Buy Now*, *Checkout*), active states, badges, ratings & charts |
+| Color | Hex Code | Usage |
+|---|---|---|
+| Midnight Navy | `#101828` | Primary background |
+| Marketplace Orange | `#FF9900` | Primary buttons and highlights |
+| Commerce Blue | `#2874F0` | Links and active states |
+| Cloud White | `#F5F7FA` | Light theme background |
 
----
-
-## Tech Stack
-
-| Layer | Technologies |
-| :--- | :--- |
-| **Core & Routing** | React 19, Vite, React Router DOM |
-| **Styling & Motion** | Tailwind CSS (`@tailwindcss/vite`), CSS Variables, Framer Motion, Lucide React |
-| **Component Libraries** | Material UI (`Rating`, `Stepper`), Ant Design (`Table`, `Tag`, `Popconfirm`, `Slider`) |
-| **Data Visualization** | Recharts (`AreaChart`, `BarChart`, `ResponsiveContainer`) |
-| **State & Persistence** | Zustand (`persist` middleware with browser `localStorage`), React Toastify |
+The interface combines clean typography, consistent spacing, rounded cards, subtle shadows, and smooth interactions.
 
 ---
 
-## Project Structure
+## 🛠️ Tech Stack
+
+### Frontend
+- React
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+
+### UI Libraries
+- Tailwind CSS
+- shadcn/ui
+- Material UI
+- Ant Design
+
+### Styling and Animations
+- Framer Motion
+- CSS Variables
+- Responsive CSS
+
+### State Management
+- Zustand
+- LocalStorage
+
+### Routing
+- React Router DOM
+
+### Icons
+- Lucide React
+- Material UI Icons
+
+### Charts
+- Recharts
+
+### Notifications
+- React Toastify
+
+---
+
+## 📁 Project Structure
 
 ```text
 global-cart/
 ├── public/
-│   └── images/
+│   ├── images/
+│   │   ├── banners/
+│   │   ├── categories/
+│   │   └── placeholders/
+│   └── favicon.svg
+│
 ├── src/
+│   ├── assets/
+│   │   ├── images/
+│   │   └── styles/
+│   │
 │   ├── components/
-│   │   ├── cart/           # CartDrawer, CartItem, CartSummary, CouponInput
-│   │   ├── common/         # Breadcrumbs, Button, EmptyState, PriceDisplay, RatingStars
-│   │   ├── home/           # HeroSection, CategorySection, DealOfTheDay, BrandShowcase
-│   │   ├── layout/         # AnnouncementBar, Header, Navbar, Footer, MainLayout
-│   │   ├── product/        # ProductCard, ProductFilters, ProductGallery, ProductGrid
-│   │   ├── ui/             # Dialog, DropdownMenu, Sheet, Tabs
-│   │   └── wishlist/       # WishlistButton, WishlistItem
-│   ├── data/               # banners.js, categories.js, navigation.js, offers.js, products.js
+│   │   ├── layout/
+│   │   ├── common/
+│   │   ├── product/
+│   │   ├── cart/
+│   │   ├── wishlist/
+│   │   ├── home/
+│   │   └── ui/
+│   │
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Products.jsx
+│   │   ├── ProductDetails.jsx
+│   │   ├── Categories.jsx
+│   │   ├── Cart.jsx
+│   │   ├── Wishlist.jsx
+│   │   ├── Checkout.jsx
+│   │   ├── OrderSuccess.jsx
+│   │   ├── Offers.jsx
+│   │   ├── AdminDashboard.jsx
+│   │   ├── About.jsx
+│   │   └── Contact.jsx
+│   │
 │   ├── features/
-│   │   ├── auth/           # authStore.js
-│   │   ├── cart/           # cartStore.js
-│   │   ├── products/       # productStore.js
-│   │   ├── theme/          # ThemeProvider.jsx, ThemeSwitcher.jsx, themeStore.js
-│   │   └── wishlist/       # wishlistStore.js
-│   ├── hooks/              # useCart.js, useDebounce.js, useProducts.js, useWishlist.js
-│   ├── pages/              # Login, Home, Products, ProductDetails, Categories, Orders, Checkout, AdminDashboard, etc.
-│   ├── routes/             # AppRoutes.jsx
-│   ├── styles/             # index.css
-│   ├── utils/              # formatPrice.js
+│   │   ├── theme/
+│   │   ├── cart/
+│   │   ├── wishlist/
+│   │   └── products/
+│   │
+│   ├── data/
+│   │   ├── products.js
+│   │   ├── categories.js
+│   │   ├── banners.js
+│   │   └── offers.js
+│   │
+│   ├── hooks/
+│   ├── utils/
+│   ├── routes/
+│   ├── styles/
 │   ├── App.jsx
 │   └── main.jsx
+│
 ├── index.html
 ├── package.json
-└── vite.config.js
-
+├── vite.config.js
+├── tailwind.config.js
+├── README.md
+└── DESIGN.md
 ```
 
 ---
 
-## Getting Started
+## 🚀 Getting Started
 
-### 1. Navigate to the Project Directory
+Follow these steps to run the project locally.
 
-```bash
-cd global-cart
-
-```
-
-### 2. Install Dependencies
+### 1. Clone the repository
 
 ```bash
-npm install --legacy-peer-deps
-
+git clone https://github.com/SAHHITH/Global-Cart.git
 ```
 
-### 3. Start the Development Server
+### 2. Navigate to the project directory
+
+```bash
+cd Global-Cart
+```
+
+### 3. Install dependencies
+
+```bash
+npm install
+```
+
+### 4. Start the development server
 
 ```bash
 npm run dev
-
 ```
 
-Open `http://localhost:5173` in your browser.
+### 5. Open the application
 
-### 4. Build for Production
+Open the local URL displayed in your terminal, usually:
 
-```bash
-npm run build
-
+```text
+http://localhost:5173
 ```
 
 ---
 
-## Demo Guide & Promo Codes
+## 🧪 Available Scripts
 
-* **Instant Sign-In:** On the startup `/login` screen, use **Continue as Shopper** or **Sign In as Admin** for one-click access, or register with any name, email, and password.
-* **Active Promo Codes (Cart & Checkout):**
-* `WELCOME15` — **15% OFF** your entire order
-* `GLOBAL10` — **10% OFF** on orders **₹2,000** and above
-* `SAVE500` — Flat **₹500 OFF** on orders **₹5,000** and above
-
-
-* **Live Shipment Simulation:** Navigate to **Orders** (`/orders`) in the top header and click **Simulate Next Transit Step** on any active shipment to watch it progress from the fulfillment warehouse to customer delivery.
+| Command | Description |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build the project for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
 
 ---
 
-## Application Routes
+## 💾 Data Storage
 
-| Route | Page | Description |
-| --- | --- | --- |
-| `/login` | **Login / Sign Up** | Startup authentication gate with demo access |
-| `/` | **Home** | Hero carousel, category strip, Deal of the Day, featured catalog & brands |
-| `/products` | **All Products** | Full catalog with multi-facet filters (`₹` range, brand, rating) & sorting |
-| `/products/:id` | **Product Details** | Image gallery, technical specs table, customer reviews & related items |
-| `/categories` | **Categories** | Directory of all 10 shopping departments |
-| `/categories/:slug` | **Category Details** | Department banner and filtered product listing |
-| `/search` | **Search Results** | Keyword and category-scoped search results |
-| `/cart` | **Shopping Cart** | Item quantity controls, promo code box & INR breakdown |
-| `/wishlist` | **Wishlist** | Saved items with one-click move to cart |
-| `/checkout` | **Checkout** | 3-step MUI Stepper checkout flow |
-| `/order-success` | **Order Confirmation** | Order reference receipt after checkout |
-| `/orders` | **Ordered Details** | Payment receipt & 5-stage warehouse-to-customer shipment tracker |
-| `/offers` | **Today’s Offers** | Copyable promo codes & top discounted products |
-| `/about` | **About Us** | Platform overview and architecture highlights |
-| `/contact` | **Contact Support** | Customer support hub and inquiry form |
-| `/admin` | **Admin Dashboard** | Revenue/inventory Recharts analytics & Ant Design SKU manager |
+This project is frontend-only and does not require a backend server or database.
+
+The application uses:
+
+- Mock product data stored in JavaScript files
+- LocalStorage for cart persistence
+- LocalStorage for wishlist persistence
+- LocalStorage for theme preferences
+- Mock data for dashboard analytics
+
+All checkout operations are simulated and do not process real payments.
 
 ---
 
-## Author
+## 🧩 Main Components
 
-Developed by **G Shahith**
+The application includes reusable components such as:
 
-```
+1. Header
+2. Navbar
+3. HeroSection
+4. CategorySection
+5. ProductCard
+6. ProductGrid
+7. ProductFilters
+8. ProductSort
+9. ProductDetails
+10. CartDrawer
+11. CartSummary
+12. WishlistButton
+13. DealOfTheDay
+14. ThemeToggle
+15. Footer
+16. Checkout
+17. AdminDashboard
 
-```
+---
+
+## 🔮 Future Enhancements
+
+- Backend integration using Node.js and Express
+- MongoDB product database
+- User authentication
+- Real-time inventory management
+- Payment gateway integration
+- Order tracking
+- Product recommendations using AI
+- Admin product management
+- Cloud deployment
+- Progressive Web App support
+
+---
+
+## 🎯 Project Objective
+
+The objective of Global Cart is to develop a modern e-commerce frontend that demonstrates practical knowledge of React, component-based architecture, state management, responsive UI design, theme customization, and frontend application development.
+
+This project is designed as a portfolio project to showcase frontend development skills and modern e-commerce UI/UX implementation.
+
+---
+
+## 👨‍💻 Developer
+
+**G Shahith**
+
+B.E. Computer Science and Engineering (AI & ML)
+
+Mohamed Sathak A.J. College of Engineering
+
+Chennai, India
+
+---
+
+## 📄 License
+
+This project is created for educational and portfolio purposes.
+
+---
+
+⭐ If you like this project, consider giving it a star on GitHub!
